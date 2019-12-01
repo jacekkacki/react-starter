@@ -9,9 +9,9 @@ class List extends React.Component {
     title: PropTypes.node.isRequired,
     adresImg: PropTypes.string.isRequired,
     children: PropTypes.node,
-    firstColumn: PropTypes.string.isRequired,
-    secondColumn: PropTypes.string.isRequired,
-    thirdColumn: PropTypes.string.isRequired,
+    firstColumn: PropTypes.string,
+    secondColumn: PropTypes.string,
+    thirdColumn: PropTypes.string,
   }
 
   static defaultProps = {

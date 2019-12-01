@@ -9,9 +9,9 @@ const Column = props => (
 );
 
 Column.propTypes = {
-  firstColumn: PropTypes.string.isRequired,
-  secondColumn: PropTypes.string.isRequired,
-  thirdColumn: PropTypes.string.isRequired,
+  firstColumn: PropTypes.string,
+  secondColumn: PropTypes.string,
+  thirdColumn: PropTypes.string,
 };
 
 export default Column;
