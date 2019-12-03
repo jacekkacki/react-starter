@@ -1,17 +1,47 @@
 import React from 'react';
 import styles from './Column.scss';
 import PropTypes from 'prop-types';
+import {settings} from '../../data/dataStore';
+import Card from '../Card/Card.js';
+import Creator from '../Creator/Creator.js';
+import Icon from '../Icon/Icon.js';
 
-const Column = props => (
-  <section className={styles.component}>
-    <h3 className={styles.title}>{props.firstColumn}{props.secondColumn}{props.thirdColumn}</h3>
-  </section>
-);
+class Column extends React.Component {
+  static propTypes = {
+    title: PropTypes.node.isRequired,
+    cards: PropTypes.array,
+    icon: PropTypes.string,
+    addCard: PropTypes.func,
+  }
 
-Column.propTypes = {
-  firstColumn: PropTypes.string,
-  secondColumn: PropTypes.string,
-  thirdColumn: PropTypes.string,
-};
+  static defaultProps = {
+    icon: settings.defaultColumnIcon,
+  }
+
+  render() {
+    return (
+      <section className={styles.component}>
+        
+      <h3 className={styles.title}>
+        <span className={styles.icon}>
+          <Icon name={this.props.icon} />
+        </span>
+        {this.props.title}
+      </h3>
+
+      <div className={styles.cards}>
+        {this.props.cards.map(({key, ...cardProps}) => (
+          <Card key={key} {...cardProps} />
+        ))}
+      </div>
+
+      <div className={styles.creator}>
+        <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
+      </div>
+
+    </section>
+    );
+  }
+}
 
 export default Column;
