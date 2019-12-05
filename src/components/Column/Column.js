@@ -7,17 +7,35 @@ import Creator from '../Creator/Creator.js';
 import Icon from '../Icon/Icon.js';
 
 class Column extends React.Component {
+
+  state = {
+    cards: this.props.cards || [],
+  }
+
   static propTypes = {
     title: PropTypes.node.isRequired,
     cards: PropTypes.array,
     icon: PropTypes.string,
-    addCard: PropTypes.func,
   }
 
   static defaultProps = {
     icon: settings.defaultColumnIcon,
   }
 
+  addCard(title){
+    this.setState(state => (
+      {
+        cards: [
+          ...state.cards,
+          {
+            key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
+            title,
+          }
+        ]
+      }
+    ));
+  }
+  
   render() {
     return (
       <section className={styles.component}>
@@ -30,7 +48,7 @@ class Column extends React.Component {
       </h3>
 
       <div className={styles.cards}>
-        {this.props.cards.map(({key, ...cardProps}) => (
+        {this.state.cards.map(({key, ...cardProps}) => (
           <Card key={key} {...cardProps} />
         ))}
       </div>
