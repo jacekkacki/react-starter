@@ -1,6 +1,9 @@
 export const settings = {
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
+  header: {
+    icon: 'rocket',
+  },
   creator: {
     buttonOK: 'OK',
     buttonCancel: 'Cancel',
@@ -12,6 +15,18 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+};
+
+export const pageInfo = {
+  title: 'Page Info',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  content: 'Information about ToDo Single-Page Application with React-Redux-Router',
+};
+
+export const pageFAQ = {
+  title: 'Page FAQ',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  content: 'FAQ about ToDo Single-Page Application with React-Redux-Router',
 };
 
 export const pageContents = {
