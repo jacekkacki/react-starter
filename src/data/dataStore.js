@@ -94,6 +94,18 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Urgent and important tasks',
+    description: 'Tasks to be comleted within a week!',
+    image: '/src/images/task-planning.png',
+  },
+  {
+    id: 'list-3',
+    title: 'Other tasks needed',
+    description: 'Tasks to be comleted within one month!',
+    image: '/src/images/task.png',
+  },
 ];
 
 const columns = [
@@ -114,12 +126,6 @@ const columns = [
     listId: 'list-1',
     title: 'Games',
     icon: 'gamepad',
-  },
-  {
-    id: 'column-4',
-    listId: 'list-2',
-    title: 'Strange column',
-    icon: 'question',
   },
 ];
 
