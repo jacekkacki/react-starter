@@ -98,13 +98,13 @@ const lists = [
     id: 'list-2',
     title: 'Urgent and important tasks',
     description: 'Tasks to be comleted within a week!',
-    image: '/src/images/task-planning.png',
+    image: 'https://images.unsplash.com/photo-1512314889357-e157c22f938d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
   },
   {
     id: 'list-3',
     title: 'Other tasks needed',
     description: 'Tasks to be comleted within one month!',
-    image: '/src/images/task.png',
+    image: 'https://images.unsplash.com/photo-1529119513315-c7c361862fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
   },
 ];
 
